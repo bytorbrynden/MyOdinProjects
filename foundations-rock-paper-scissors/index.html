@@ -4,13 +4,26 @@
         <title>Rock Paper Scissors Game</title>
     </head>
     <body>
-        <p>Welcome to Rock Paper Scissors!</p>
+        <div class="gameWrapper">
+            <h1>Welcome to Rock Paper Scissors!</h1>
+            <p>Computer win count: <span id="computerWinCounter">0</span></p>
+            <p>Player win count: <span id="humanWinCounter">0</span></p>
+
+            <div class="playerSelectionWrapper">
+                <select name="playerSelection" id="playerSelection">
+                    <option value="0">Rock</option>
+                    <option value="1">Paper</option>
+                    <option value="2">Scissors</option>
+                </select>
+            </div>
+
+            <button onclick="playButtonClick()">Click to play</button>
+        </div>
 
         <div class="options">
             <input type="checkbox" onchange="toggleDevMode()" checked>
             <span>Development mode</span>
         </div>
-        <button onclick="playButtonClick()">Click to play</button>
 
         <script type="text/javascript" src="rockpaperscissors.js"></script>
     </body>
