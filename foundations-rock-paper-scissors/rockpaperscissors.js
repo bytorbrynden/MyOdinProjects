@@ -7,6 +7,9 @@ const GAMEPLAY_RULES   = {
 
 let developmentMode = true;
 
+let computerWinCount = 0;
+let humanWinCount    = 0;
+
 let developmentMessage = (msg) => {
     if (developmentMode) console.log("[DEV] " + msg);
 };
@@ -54,15 +57,36 @@ let playRound = (computerChoice, humanChoice) => {
     developmentMessage("Human chose " + humanChoiceStr + ". " + beatsHuman + " would win.");
 
     if (computerChoice == humanChoice) {
-        return "It's a tie!";
+        return "Tie";
     } else {
-        if (computerChoiceStr == beatsHuman) return "Computer wins!";
-        else if (humanChoiceStr == beatsComputer) return "Human wins!";
+        if (computerChoiceStr == beatsHuman) return "Computer";
+        else if (humanChoiceStr == beatsComputer) return "Human";
     }
 };
 
+let updateInterface = (computerWins, humanWins) => {
+    document.getElementById("computerWinCounter").textContent = computerWins;
+    document.getElementById("humanWinCounter").textContent    = humanWins;
+};
+
 let playButtonClick = () => {
-    alert(playRound(getComputerChoice(), getHumanChoice()));
+    switch (playRound(getComputerChoice(), getHumanChoice())) {
+        case "Computer":
+            computerWinCount++;
+            alert("Computer wins!");
+            break;
+
+        case "Human":
+            humanWinCount++;
+            alert("Player wins!");
+            break;
+        
+        case "Tie":
+            alert("It's a tie!");
+            break;
+    }
+
+    updateInterface(computerWinCount, humanWinCount);
 };
 
 developmentMessage("Rock Paper Scissors script loaded!");
