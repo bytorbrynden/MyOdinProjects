@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body * {
+    margin: 0;
+}
+
+.gameWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.gameWrapper * {
+    margin-bottom: 0.5em;
+}
+
+.gameWrapper .gameInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.gameWrapper .gameInfoWrapper .scoringInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+}
+
+.gameWrapper .gameplayWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

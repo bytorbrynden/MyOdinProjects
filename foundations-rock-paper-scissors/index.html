@@ -2,27 +2,40 @@
 <html>
     <head>
         <title>Rock Paper Scissors Game</title>
+
+        <link rel="stylesheet" type="text/css" href="main.css" />
     </head>
     <body>
         <div class="gameWrapper">
-            <h1>Welcome to Rock Paper Scissors!</h1>
-            <p>Computer win count: <span id="computerWinCounter">0</span></p>
-            <p>Player win count: <span id="humanWinCounter">0</span></p>
-
-            <div class="playerSelectionWrapper">
-                <select name="playerSelection" id="playerSelection">
-                    <option value="0">Rock</option>
-                    <option value="1">Paper</option>
-                    <option value="2">Scissors</option>
-                </select>
+            <div class="gameInfoWrapper">
+                <h1>Welcome to Rock Paper Scissors!</h1>
+                <div class="scoringInfo">
+                    <p>Computer win count: <span id="computerWinCounter">0</span></p>
+                    <p>Player win count: <span id="humanWinCounter">0</span></p>
+                </div>
             </div>
 
-            <button onclick="playButtonClick()">Click to play</button>
+            <div class="gameplayWrapper">
+                <div class="playerSelectionWrapper">
+                    <span>Your play: </span>
+                    <select name="playerSelection" id="playerSelection">
+                        <option value="0">Rock</option>
+                        <option value="1">Paper</option>
+                        <option value="2">Scissors</option>
+                    </select>
+                </div>
+
+                <button onclick="playButtonClick()">Challenge computer</button>
+            </div>
         </div>
 
         <div class="options">
             <input type="checkbox" onchange="toggleDevMode()" checked>
             <span>Development mode</span>
+        </div>
+
+        <div class="footer">
+            <span>Built by Brynden "<a href="https://github.com/bytorbrynden">bytorbrynden</a>" Bielefeld during <a href="https://www.theodinproject.com/">The Odin Project</a>.</span>
         </div>
 
         <script type="text/javascript" src="rockpaperscissors.js"></script>
