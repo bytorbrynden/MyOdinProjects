@@ -2,8 +2,24 @@
 <html>
     <head>
         <title>Etch-a-Sketch</title>
+
+        <link rel="stylesheet" href="./main.css">
     </head>
     <body>
-        <div class="gridContainer"></div>
+        <div class="container">
+            <div class="info">
+                <h1>Etch-a-Sketch</h1>
+                <div class="controls">
+                    <div class="sizeController">
+                        <input type="range" min="8" max="32" value="16" id="sizeSlider" onchange="updateGridSize()">
+                        <span id="selectedSize">16</span>
+                    </div>
+                    <button onclick="resetGrid()">Reset Grid</button>
+                </div>
+            </div>
+            <div id="grid"></div>
+        </div>
+
+        <script type="text/javascript" src="./etchasketch.js"></script>
     </body>
 </html>
