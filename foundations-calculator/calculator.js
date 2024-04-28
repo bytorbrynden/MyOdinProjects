@@ -8,6 +8,14 @@ let updateDisplay = () => {
     document.getElementById("calculatorDisplay").value = currentDisplayValue;
 };
 
+let resetCalculator = () => {
+    currentDisplayValue = "";
+    currentNumberIndex = 0;
+    computionComplete = false;
+
+    updateDisplay();
+};
+
 let computeEquation = () => {
     let firstNumber = +currentSelectedNums[0];
     let secondNumber = +currentSelectedNums[1];
@@ -37,9 +45,7 @@ let computeEquation = () => {
 let getNumberHandler = (selectedNumber) => {
     return (() => {
         if (computionComplete) {
-            currentDisplayValue = "";
-            currentNumberIndex = 0;
-            computionComplete = false;
+            resetCalculator();
         }
 
         currentSelectedNums[currentNumberIndex] += selectedNumber;

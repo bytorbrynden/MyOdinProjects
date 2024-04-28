@@ -62,3 +62,14 @@ body {
     background-color: #FEEED3;
     font-weight: bolder;
 }
+
+.miscBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    height: 4em;
+
+    border: solid black 0.1px;
+}
