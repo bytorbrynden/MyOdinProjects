@@ -29,16 +29,17 @@ let getComputerChoice = () => {
 };
 
 let getHumanChoice = () => {
-    let numericChoice = +prompt("Enter your choice!");
+    // let numericChoice = +prompt("Enter your choice!");
 
-    // Humans can make errors, so let's perform a simple check to make sure the value the user entered is valid.
-    if (numericChoice >= POSSIBLE_CHOICES.length) {
-        developmentMessage("Player provided invalid choice, trying again.");
-        alert("Invalid selection, available choices are 0, 1, or 2.");
+    // // Humans can make errors, so let's perform a simple check to make sure the value the user entered is valid.
+    // if (numericChoice >= POSSIBLE_CHOICES.length) {
+    //     developmentMessage("Player provided invalid choice, trying again.");
+    //     alert("Invalid selection, available choices are 0, 1, or 2.");
 
-        return getHumanChoice();
-    }
+    //     return getHumanChoice();
+    // }
 
+    let numericChoice = +document.getElementById("playerSelection").value;
     let englishChoice = POSSIBLE_CHOICES[numericChoice];
 
     developmentMessage("Human's numeric choice: " + numericChoice);
