@@ -31,38 +31,38 @@ div.sidebar-wrapper {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
 
-div.sidebar-wrapper > div.sidebar-banner {
-    display: flex;
-    flex-basis: 10%;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-
-    width: 100%;
-
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    margin-top: 20vh;
-
-    p {
-        font-size: 36px;
-        font-weight: bolder;
+    div.sidebar-banner {
+        display: flex;
+        flex-basis: 10%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    
+        width: 100%;
+    
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin-top: 20vh;
+    
+        p {
+            font-size: 36px;
+            font-weight: bolder;
+        }
     }
-}
 
-div.sidebar-wrapper > div.sidebar-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-
-    margin-top: auto;
-    padding: 1em;
-
-    color: #FFF;
-    font-size: 12px;
+    div.sidebar-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    
+        margin-top: auto;
+        padding: 1em;
+    
+        color: #FFF;
+        font-size: 12px;
+    }
 }
 
 div.content-wrapper {
@@ -72,39 +72,57 @@ div.content-wrapper {
     background-color: hsl(210deg 20% 98.04%);
 
     width: 70vw;
-}
 
-div.content-wrapper > div.content-heading-wrapper {
-    margin-bottom: calc(20% - calc(2em * 2));
+    div.content-heading-wrapper {
+        margin-bottom: calc(20% - calc(2em * 2));
+    
+        padding: 2em;
+    }
 
-    padding: 2em;
-}
+    div.signup-form-wrapper {
+        div.form-inputs-wrapper {
+            background-color: #FFF;
 
-div.content-wrapper > div.signup-form-wrapper > div.form-inputs-wrapper {
-    background-color: #FFF;
-}
+            padding: 2em;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
 
-div.signup-form-wrapper > div.form-inputs-wrapper {
-    padding: 2em;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-}
+            form > div.form-row {
+                display: flex;
+                flex-direction: row;
+                gap: 2em;
 
-div.signup-form-wrapper > div.form-inputs-wrapper > form > div.form-row {
-    display: flex;
-    flex-direction: row;
-    gap: 2em;
-}
+                width: 35%;
 
-div.signup-form-wrapper > div.form-inputs-wrapper > form > div.form-row > div.form-item {
-    display: flex;
-    flex-direction: column;
+                div.form-item {
+                    display: flex;
+                    flex-direction: column;
+                
+                    label {
+                        font-size: 0.8em;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
 
-    label {
-        font-size: 0.8em;
-        text-transform: uppercase;
+        div.form-submit-wrapper {
+            padding: 2em;
+        }
     }
 }
 
-div.signup-form-wrapper > div.form-submit-wrapper {
-    padding: 2em;
+input {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    padding: 0.3em;
+}
+
+input:focus {
+    border-color: cyan;
+}
+
+input:invalid {
+    border-color: orange;
 }
