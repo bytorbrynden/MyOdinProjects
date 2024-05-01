@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --themeColor: darkblue;
+}
+
 div.base-wrapper {
     display: flex;
     flex-direction: row;
@@ -74,9 +78,22 @@ div.content-wrapper {
     width: 70vw;
 
     div.content-heading-wrapper {
+        display: flex;
+        flex-direction: column;
+
         margin-bottom: calc(20% - calc(2em * 2));
-    
+
         padding: 2em;
+        padding-left: 6em;
+        padding-right: 6em;
+
+        font-size: 24px;
+
+        p.bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
     }
 
     div.signup-form-wrapper {
@@ -120,9 +137,32 @@ input {
 }
 
 input:focus {
-    border-color: cyan;
+    border-color: var(--themeColor);
 }
 
 input:invalid {
-    border-color: orange;
+    border-color: red;
+}
+
+button {
+    border: 1px solid var(--themeColor);
+    border-radius: 8px;
+
+    color: white;
+    background-color: var(--themeColor);
+
+    padding: 1.2em;
+}
+
+button:hover {
+    color: var(--themeColor);
+    background-color: white;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+a {
+    color: var(--themeColor);
 }
